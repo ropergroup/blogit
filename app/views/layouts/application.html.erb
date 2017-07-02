@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blogit</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Blog It</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <ul>
+  <li><%= link_to "Home", welcome_index_path %></li>
+  <li><%= link_to "About", welcome_about_path %></li>
+</ul>
+</head>
+ <body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= yield %>
 
-  <body>
-    <%= yield %>
-  </body>
+</body>
 </html>
